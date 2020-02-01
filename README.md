@@ -1,3 +1,18 @@
+
+Working:
+The design consists of two RGB leds. No. 2 is for output and the other one (No. 1)is for reflecting light on LDR. When an object is placed near the No. 1 RGB led, the object absorbs all the other colours except its own colour. For example a red object will absorb all other colours falling onto it except red. Thus red is reflected on the LDR and its resistance changes. This input is continuous taken. We can thus light up the second led as RED and print “Colour is Red” onto the serial monitor.
+
+Design:  
+Three resistors are in series with the LDR and the two RGB leds.  no. 1 RGB is connected to digital pins 2,3,4 of Arduino Uno (R-2,G-3,B-4). no. 2  RGB is connected to digital pins 8,9,10 of Arduino (R-8,G-9,B-10). LDR’s anode is connected to 5V of Arduino Uno.
+
+Calculations :
+Maximum current in the LDR or RGB led is: 20mA (datasheet)
+Working voltage = 2V (datasheet)
+Hence by ohms law,
+R=(5-2)/20m
+   = 150 ohms
+Therefore, I have chosen resistor of 200 ohms for safety.
+
 int redled=2;
 int greenled=3;
 int blueled=4;
